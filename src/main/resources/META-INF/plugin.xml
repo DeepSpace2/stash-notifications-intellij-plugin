@@ -11,4 +11,5 @@
     <projectListeners>
         <listener class="StashNotificationBranchChangeListener" topic="com.intellij.openapi.vcs.BranchChangeListener"/>
     </projectListeners>
+    <idea-version since-build="201"/>
 </idea-plugin>
