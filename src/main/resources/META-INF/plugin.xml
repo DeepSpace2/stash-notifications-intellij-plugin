@@ -1,0 +1,14 @@
+<idea-plugin>
+    <id>com.deepspace.stash_notifications_plugin</id>
+    <name>Stash Notifications</name>
+    <vendor>Adi Vaknin</vendor>
+    <description>This plug in will show a small notification when you checkout a branch which has a stash</description>
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
+    <projectListeners>
+        <listener class="StashNotificationBranchChangeListener" topic="com.intellij.openapi.vcs.BranchChangeListener"/>
+    </projectListeners>
+</idea-plugin>

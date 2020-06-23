@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.21'
+}
+
+group 'com.deepspace'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = false
+    type 'PY'
+    plugins = ['git4idea']
+}
+
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = false
+    type 'PC'
+    plugins = ['git4idea']
+}
+
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = false
+    type 'IC'
+    plugins = ['git4idea']
+}
+
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = false
+    type 'IU'
+    plugins = ['git4idea']
+}
+
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = false
+    type 'CL'
+    plugins = ['git4idea']
+}
+
+patchPluginXml {
+    changeNotes """
+      1.0.0
+      <ul><li>Initial Release</li></ul>
+      """
+}
