@@ -56,3 +56,7 @@ patchPluginXml {
       <ul><li>Initial Release</li></ul>
       """
 }
+
+publishPlugin {
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}
